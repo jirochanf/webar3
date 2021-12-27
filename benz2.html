@@ -18,24 +18,14 @@
             embedded
             gesture-detector
         >
-            <a-assets>
-                <a-asset-item
-                    id="benz-asset"
-                    src="assets/benz.glb"
-                ></a-asset-item>
-            </a-assets>
+           
+        <a-assets timeout="30000">
+		<a-asset-item id="benz_gltf" src="./assets/benz.gltf"></a-asset-item>
+		</a-assets>
 
-                <a-entity
-                    id="bowser-model"
-                    scale="1.0064601709178569 1.0064601709178569 1.0064601709178569"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#benz-asset"
-                    class="clickable"
-                    gesture-handler
-                    position="-3 1 0"
-                >
-            </a-entity>
-
+		<!-- GLTF, Obj -->
+		<a-gltf-model src="#submarine_gltf" position="-5 5 -15" rotation="0 -20 0"></a-gltf-model>
+      
             <a-entity camera></a-entity>
         </a-scene>
     </body>
