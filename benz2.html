@@ -8,8 +8,9 @@
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     </head>
 
-    <body style="margin: 0; overflow: hidden;">
-        <a-scene
+    <body>
+
+	    <a-scene
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
             renderer="logarithmicDepthBuffer: true;"
@@ -19,7 +20,7 @@
             gesture-detector
         >
            
-        <a-assets timeout="30000">
+                <a-assets timeout="30000">
 		<a-asset-item id="benz_gltf" src="./assets/benz.gltf"></a-asset-item>
 		</a-assets>
 
@@ -27,6 +28,8 @@
 		<a-gltf-model src="#submarine_gltf" position="-5 5 -15" rotation="0 -20 0"></a-gltf-model>
       
             <a-entity camera></a-entity>
-        </a-scene>
+		    
+           </a-scene>
+	    
     </body>
 </html>
