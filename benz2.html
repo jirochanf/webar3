@@ -18,18 +18,15 @@
         >
             <a-assets>
                 <a-asset-item
-                    id="animated-asset"
+                    id="benz_gltf"
                     src="assets/benz.gltf"
                 ></a-asset-item>
             </a-assets>
 
-                <a-entity
-                    look-at="[camera]"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"
-                    scale="0.1 0.1 0.1"
-                          class="clickable"
-                ></a-entity>
+            
+            <a-gltf-model src="#benz_gltf" position="-5 5 -15" rotation="0 -20 0"></a-gltf-model>
+
+                
 <a-entity camera></a-entity>
         </a-scene>
     </body>
