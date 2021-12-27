@@ -1,42 +1,17 @@
 <!doctype html>
 <html>
+    
     <head>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-    </head>
-
-    <body style="margin: 0; overflow: hidden;">
-        <a-scene
-            vr-mode-ui="enabled: false;"
-            loading-screen="enabled: false;"
-            renderer="logarithmicDepthBuffer: true;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-            id="scene"
-            embedded
-            gesture-detector
-        >
-            <a-assets>
-                <a-asset-item
-                    id="benz"
-                    src="assets/benz.glb"
-                ></a-asset-item>
-            </a-assets>
-
-      <a-plane position="0 0 -5" rotation="-90 0 0" width="6" height="6" color="#7BC8A4"></a-plane>      
-                <a-entity
-                    id="bowser-model"
-                    scale="1.0064601709178569 1.0064601709178569 1.0064601709178569"
-                    animation-mixer="loop: repeat"
-                    gltf-model="benz"
-                    class="clickable"
-                    gesture-handler
-                    position="30 1 0">
-                ></a-entity>
-            
-            <a-entity camera></a-entity>
-        </a-scene>
-    </body>
-</html>
+	<meta charset="UTF-8"/>
+	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+	<script src="./main.js"></script>
+</head>
+<body>
+	<a-scene stats loading-screen="dotsColor: gray; backgroundColor: lightgray">
+		<a-sky color="#ECECEC"></a-sky>
+		<a-plane position="0 0 -5" rotation="-90 0 0" width="6" height="6" color="#7BC8A4"></a-plane>
+	</a-scene>
+    
+    
+</body></html>
